@@ -7,4 +7,8 @@ const isUnique = (string) => {
 	return seen.size === string.length;
 };
 
-module.exports = isUnique;
+/* TESTS */
+console.log(isUnique("abcd"), "true");
+console.log(isUnique("abccd"), "false");
+console.log(isUnique("bhjjb"), "false");
+console.log(isUnique("mdjq"), "true");
