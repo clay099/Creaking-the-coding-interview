@@ -7,12 +7,13 @@ const palinPerm = (str) => {
 		freq.set(char, prevFreq + 1);
 	}
 	let oddCount = 0;
-	for (let key of freq) {
-		if (freq[key] % 2 !== 0) {
+	for (let char of freq) {
+		if (char[1] % 2 !== 0) {
 			oddCount++;
+			if (oddCount > 1) return false;
 		}
 	}
-	return oddCount < 2;
+	return true;
 };
 
 // TESTS
