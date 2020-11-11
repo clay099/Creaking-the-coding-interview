@@ -1,13 +1,15 @@
 let strComp = (str) => {
-	let out = "";
+	//out is a array not string. String concat is O(n) where array appending is O(1)
+	let out = [];
 	let startP = 0;
 	for (let i = 0; i < str.length; i++) {
 		if (str[i] !== str[i + 1]) {
-			out = out.concat(str[i], i - startP + 1);
+			out.push(str[i], i - startP + 1);
 			startP = i + 1;
 		}
 	}
-	if (out.length < str.length) return out;
+	let val = out.join("");
+	if (out.length < str.length) return val;
 	return str;
 };
 
