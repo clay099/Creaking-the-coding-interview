@@ -2,6 +2,7 @@
 const isUnique = (string) => {
 	let seen = new Set();
 	for (let char of string) {
+		if (seen.has(char)) return false;
 		seen.add(char);
 	}
 	return seen.size === string.length;
