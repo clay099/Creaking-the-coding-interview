@@ -2,7 +2,6 @@ const LinkedList = require("../util/LinkedListX");
 const printList = require("../util/printList");
 
 const partition = (ll, par) => {
-	debugger;
 	let L1 = new LinkedList();
 	let L2 = new LinkedList();
 
@@ -31,7 +30,6 @@ for (let ele of [3, 5, 8, 5, 10, 2, 1]) {
 }
 
 console.log("before:");
-printList(list.head);
-let updatedLL = partition(list, 5);
+printList(list.head);let updatedLL = partition(list, 5);
 console.log("after:");
 printList(updatedLL.head);
