@@ -3,11 +3,14 @@ const LinkedList = require("../util/LinkedListX");
 function intersection(LL1, LL2) {
 	let curr1 = LL1.head;
 	let curr2 = LL2.head;
+	console.log("curr1", curr1);
+	console.log("curr2", curr2);
+	// console.log("val2 ", LL2.head);
 	while (curr1) {
 		console.log("val1 ", curr1.value);
 		while (curr2) {
 			if (curr2 !== curr1) {
-				console.log("val2 ", curr2.value);
+				// console.log("val2 ", curr2.value);
 				curr2 = curr2.next;
 			} else {
 				curr2 = LL2.head;
