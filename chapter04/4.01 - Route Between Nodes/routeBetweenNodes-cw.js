@@ -1,7 +1,8 @@
 var Graph = require("./../util/Graph");
 var Queue = require("./../util/Queue");
 
-// solved using two BFS to get values as quick as possible (if one route doesn't have a link it will require false quicker)
+// solved using two BFS to get values as quick as possible 
+// (if one route doesn't have a link it will require false quicker)
 function checkRoute(S, E, graph) {
 	let q1 = new Queue();
 	let q2 = new Queue();
